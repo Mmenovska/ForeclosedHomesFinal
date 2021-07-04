@@ -43,6 +43,7 @@ class PropertiesFragment : Fragment() {
         val cityClicked = arguments?.getString("cityClicked")?:""
         for (item in properties){
             if (item != null && item.city == cityClicked){
+                filteredProperties.clear()
                 filteredProperties.add(item)
             }
         }
