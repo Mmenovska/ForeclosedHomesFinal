@@ -198,14 +198,12 @@
         android:orientation="horizontal"
         app:layout_constraintTop_toBottomOf="@id/contactLayout">
 
-        <TextView
+        <ImageView
             android:id="@+id/telephoneInfoTv"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:textSize="16sp"
-            android:textStyle="bold"
             android:textColor="@color/darkGrey"
-            android:text="Telephone: "/>
+            android:src="@drawable/ic_baseline_call_24"/>
         <TextView
             android:id="@+id/telephoneTv"
             android:layout_width="wrap_content"
