@@ -41,12 +41,15 @@ class PropertiesFragment : Fragment() {
         val properties = (activity as MainActivity).propertiesModel?.imoti?: ArrayList()
         val filteredProperties : ArrayList<PropertiesData> = ArrayList()
         val cityClicked = arguments?.getString("cityClicked")?:""
-        filteredProperties.clear()
-        for (item in properties){
-            if (item != null && item.city == cityClicked){
-                filteredProperties.add(item)
-            }
+        if (filteredProperties != null){
+            filteredProperties.clear()
         }
+        for (item in properties) {
+                if (item != null && item.city == cityClicked) {
+                    filteredProperties.add(item)
+                }
+            }
+
 
         propertiesAdapter = PropertiesAdapter(filteredProperties){
             if (it is PropertiesDataClickEvent.PropertiesDataItemClicked){
